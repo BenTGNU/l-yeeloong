@@ -1,0 +1,35 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=3698ade3-b2f8-45c4-b376-181220c209ef /               ext4    noatime,discard,data=writeback,barrier=0,commit=60,errors=remount-ro,user_xattr,acl 0       1
+# /boot was on /dev/sda1 during installation
+UUID=c9b15f76-1f15-4761-a8f9-fbdbf546dce2 /boot           ext2    defaults        0       2
+# /home was on /dev/sda7 during installation
+UUID=3e16512c-3bd0-4387-998d-b98d053f9bec /home           ext4    defaults,discard,relatime,nodiratime	0       2
+# swap was on /dev/sda6 during installation
+UUID=0408a4b8-515c-4faf-aad1-4422285995b6 none            swap    sw              0       0
+
+
+#### TmpFS Media ###
+tmpfs 	/media/ramdisk	tmpfs 	noatime,size=256M,mode=1777		0	0
+tmpfs 	/tmp		tmpfs 	nodev,nosuid,size=3g,mode=1777	0	0
+#tmpfs 	/var/lock	tmpfs 	defaults,size=10m,mode=1777 	0 	0
+#tmpfs 	/var/run	tmpfs 	defaults,size=10m,mode=0775 	0 	0
+
+#### CiFS ##
+#//192.168.1.10/Stockage	/media/Rpi_Storage	cifs	_netdev,noauto,users,gid=users,file_mode=0750,dir_mode=0750,iocharset=utf8	0	0
+#//192.168.1.10/Sauvegarde	/media/Rpi_Save      cifs    _netdev,noauto,users,gid=users,file_mode=0750,dir_mode=0750,iocharset=utf8	0	0
+#//192.168.1.40/disque_interne	/media/DecodSFR	cifs	_netdev,credentials=/home/.smb_pass,noauto,users,file_mode=0750,dir_mode=0750,iocharset=utf8	0	0
+//192.168.1.254/Disque\040dur/   /media/FreeboxHD cifs	_netdev,noauto,rw,users,credentials=/home/.smb_pass,sec=ntlm,uid=1000,gid=100,iocharset=utf8,file_mode=0770,dir_mode=0770 0 0
+
+#### NetFS ##
+#laughing_man@192.168.1.10:/media       /media/PiNFS    fuse.sshfs      _netdev,noauto,users,allow_other,reconnect        0       0
+sshfs#tty.sdf.org:      /media/SDF      fuse	_netdev,noauto,users,allow_other,reconnect       0       0
+curlftpfs#ftpperso.free.fr      /media/Darklog  fuse    _netdev,noauto,user,allow_other        0       0
+https://webcloud6.zaclys.com/remote.php/webdav /home/pengu/ownCloud davfs user,noauto,uid=pengu,file_mode=600,dir_mode=700 0 1
+

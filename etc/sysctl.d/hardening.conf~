@@ -1,0 +1,28 @@
+## ICMP
+# Disable ICMP broadcast echo activity
+net.ipv4.icmp_echo_ignore_broadcasts=1
+
+# Disable ICMP routing redirects
+net.ipv4.conf.all.accept_redirects=0
+net.ipv6.conf.all.accept_redirects=0
+net.ipv4.conf.all.send_redirects=0
+net.ipv6.conf.all.send_redirects=0
+
+## IP
+# Disable IP source routing
+net.ipv4.conf.all.accept_source_route=0
+net.ipv4.conf.all.forwarding=0
+#net.ipv4.conf.all.mc_forwarding=0
+
+# Enforce sanity checking, also called ingress filtering or egress filtering
+net.ipv4.conf.all.rp_filter=1
+
+# Log and drop "Martian" packets
+net.ipv4.conf.all.log_martians=1
+
+## TCP
+#Increase resiliance under heavy TCP load (which makes the system more resistant to SYN Flood attacks)
+net.ipv4.tcp_max_syn_backlog=1280
+net.ipv4.tcp_syncookies=1
+net.ipv4.tcp_fin_timeout=5
+

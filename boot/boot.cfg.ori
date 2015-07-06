@@ -1,0 +1,16 @@
+default 0
+timeout 3
+showmenu 1
+
+title GNU/Linux gNewSense Ucclia 3.2.0
+        kernel (wd0,0)/vmlinux-3.2.0-4gnewsense1-loongson-2f
+        args console=tty root=/dev/sda5 no_auto_cmd matchtype=8.9 acpi=force apic vga=792 video=siliconmotion:1024x600
+
+title Installation de gNewSense Ucclia
+	kernel	(wd0,0)/installer/vmlinux-3.2.0-4gnewsense1-loongson-2f
+	initrd  (wd0,0)/installer/initrd.gz
+	args    console=tty no_auto_cmd matchtype=lemote-yeeloong-2f-8.9inches
+
+title   Console de recuperation
+	kernel	(wd0,0)/rescue
+	args    console=tty no_auto_cmd matchtype=lemote-yeeloong-2f-8.9inches
