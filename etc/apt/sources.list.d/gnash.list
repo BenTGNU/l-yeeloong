@@ -1,0 +1,3 @@
+## Gnash Repository
+#deb http://www.getgnash.org/debs/debian wheezy main # Gnash
+#deb-src http://www.getgnash.org/debs/debian wheezy main # Gnash

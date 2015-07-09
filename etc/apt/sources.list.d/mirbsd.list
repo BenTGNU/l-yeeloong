@@ -1,0 +1,61 @@
+# To use this repository, download the script REPOKEY and its
+# detached signature REPOKEY.asc (ideally via https):
+# $ wget https://www.mirbsd.org/~tg/Debs/REPOKEY{,.asc}
+# Then verify the PGP signature, and, only if good, run the
+# script REPOKEY as root. (The file is signed by E99007E0 - my
+# DD Emeritus key.) Or download the signing key AA917C6F from
+# a public keyserver and verify its signature from my DD key.
+# Afterwards, add one of the mirrors of this repository, for
+# example from the list below, to sources.list(5), run 'apt-get
+# update', then install the 'wtf-debian-keyring' package.
+# Note: If you use an https mirror, install the Debian package
+# 'apt-transport-https' *before* adding it to sources.list(5)!
+# This package exists since lenny only, though (or backport it).
+# Note: additional mirrors may be not up-to-date!
+#
+# ARAnyM has moved: http://shore.naturalnet.de/~tg/DP/debidx.htm
+
+
+# main mirror via https (two layers of authentication)
+deb https://www.mirbsd.org/~tg/Debs/ wheezy wtf
+deb-src https://www.mirbsd.org/~tg/Debs/ wheezy wtf
+# deb https://www.mirbsd.org/~tg/Debs/ jessie wtf #yplentyn
+# deb-src https://www.mirbsd.org/~tg/Debs/ jessie wtf #yplentyn
+## currently a symlink to sid
+# deb https://www.mirbsd.org/~tg/Debs/ stretch wtf
+# deb-src https://www.mirbsd.org/~tg/Debs/ stretch wtf
+# deb https://www.mirbsd.org/~tg/Debs/ testing wtf
+# deb-src https://www.mirbsd.org/~tg/Debs/ testing wtf
+## use this for debian-ports architectures
+# deb https://www.mirbsd.org/~tg/Debs/ sid wtf
+# deb-src https://www.mirbsd.org/~tg/Debs/ sid wtf
+
+
+# main mirror via http (faster, and still PGP secured)
+# deb http://www.mirbsd.org/~tg/Debs/ wheezy wtf
+# deb-src http://www.mirbsd.org/~tg/Debs/ wheezy wtf
+# deb http://www.mirbsd.org/~tg/Debs/ jessie wtf #yplentyn
+# deb-src http://www.mirbsd.org/~tg/Debs/ jessie wtf #yplentyn
+## currently a symlink to sid
+# deb http://www.mirbsd.org/~tg/Debs/ stretch wtf
+# deb-src http://www.mirbsd.org/~tg/Debs/ stretch wtf
+# deb http://www.mirbsd.org/~tg/Debs/ testing wtf
+# deb-src http://www.mirbsd.org/~tg/Debs/ testing wtf
+# use this for debian-ports architectures
+# deb http://www.mirbsd.org/~tg/Debs/ sid wtf
+# deb-src http://www.mirbsd.org/~tg/Debs/ sid wtf
+
+
+# additional mirror #1 (by gecko2)
+deb http://users.unixforge.de/~tglaser/debs/ wheezy wtf
+deb-src http://users.unixforge.de/~tglaser/debs/ wheezy wtf
+# deb http://users.unixforge.de/~tglaser/debs/ jessie wtf #yplentyn
+# deb-src http://users.unixforge.de/~tglaser/debs/ jessie wtf #yplentyn
+## currently a symlink to sid
+# deb http://users.unixforge.de/~tglaser/debs/ stretch wtf
+# deb-src http://users.unixforge.de/~tglaser/debs/ stretch wtf
+# deb http://users.unixforge.de/~tglaser/debs/ testing wtf
+# deb-src http://users.unixforge.de/~tglaser/debs/ testing wtf
+# use this for debian-ports architectures
+# deb http://users.unixforge.de/~tglaser/debs/ sid wtf
+# deb-src http://users.unixforge.de/~tglaser/debs/ sid wtf

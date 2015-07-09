@@ -1,0 +1,7 @@
+## MIT Mirror Repository
+deb http://mirrors.mit.edu/gnewsense/gnewsense ucclia main # MIT Mirror
+deb-src http://mirrors.mit.edu/gnewsense/gnewsense ucclia main # MIT Mirror
+deb http://mirrors.mit.edu/gnewsense/gnewsense ucclia-updates main # MIT Updates Mirror
+deb-src http://mirrors.mit.edu/gnewsense/gnewsense ucclia-updates main # MIT Updates Mirror
+deb http://mirrors.mit.edu/gnewsense/gnewsense ucclia-security main # MIT Security Mirror
+deb-src http://mirrors.mit.edu/gnewsense/gnewsense ucclia-security main # MIT Security Mirror

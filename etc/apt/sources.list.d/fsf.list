@@ -1,0 +1,8 @@
+## FSF Mirror Repository
+deb http://mirror.fsf.org/gnewsense/gnewsense ucclia main # FSF Mirror
+deb-src http://mirror.fsf.org/gnewsense/gnewsense ucclia main # FSF Mirror
+deb http://mirror.fsf.org/gnewsense/gnewsense ucclia-updates main # FSF Updates Mirror
+deb-src http://mirror.fsf.org/gnewsense/gnewsense ucclia-updates main # FSF Updates Mirror
+deb http://mirror.fsf.org/gnewsense/gnewsense ucclia-security main # FSF Updates Mirror
+deb-src http://mirror.fsf.org/gnewsense/gnewsense ucclia-security main # FSF Updates Mirror
+

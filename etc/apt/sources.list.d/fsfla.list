@@ -1,0 +1,3 @@
+## FSFLA Linux-libre Repository
+deb http://linux-libre.fsfla.org/pub/linux-libre/freeloong/ parkes main # FSFLA Linux-libre
+deb-src http://linux-libre.fsfla.org/pub/linux-libre/freeloong/ parkes main # FSFLA Linux-libre
